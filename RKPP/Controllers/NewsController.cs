@@ -17,7 +17,7 @@ namespace RKPP.Controllers
         // GET: News
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.News.ToList());
         }
 
         // GET: News/Details/5
@@ -27,7 +27,7 @@ namespace RKPP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            New @new = db.Movies.Find(id);
+            New @new = db.News.Find(id);
             if (@new == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace RKPP.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(@new);
+                db.News.Add(@new);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace RKPP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            New @new = db.Movies.Find(id);
+            New @new = db.News.Find(id);
             if (@new == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace RKPP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            New @new = db.Movies.Find(id);
+            New @new = db.News.Find(id);
             if (@new == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace RKPP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            New @new = db.Movies.Find(id);
-            db.Movies.Remove(@new);
+            New @new = db.News.Find(id);
+            db.News.Remove(@new);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

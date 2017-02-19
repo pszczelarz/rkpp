@@ -1,18 +1,20 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using MongoDB.Bson;
 
 namespace RKPP.Models
 {
     public class New
     {
         public int Id { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Content { get; set; }
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
     }
 
     public class NewDBContext : DbContext
     {
-        public DbSet<New> Movies { get; set; }
+        public DbSet<New> News { get; set; }
     }
 }

@@ -19,7 +19,11 @@
                     @Html.DisplayWithBreaksAndSpacesFor(modelItem => item.Content)
                 </p>
                 <p>
-                    @Html.ActionLink("Edytuj plan", "Edit", new { id = item.Id }) |
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Edytuj plan", "Edit", new { id = item.Id })
+                    }
+                    <v>|</v>
                 </p>
             </td>
         </tr>

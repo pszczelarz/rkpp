@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using RKPP.Models;
 
@@ -17,7 +13,10 @@ namespace RKPP.Controllers
         // GET: News
         public ActionResult Index()
         {
-            return View(db.News.ToList());
+            return View(db.News
+                            .OrderByDescending(x => x.Date)
+                            .ThenByDescending(x => x.Id)
+                            .ToList());
         }
 
         // GET: News/Details/5

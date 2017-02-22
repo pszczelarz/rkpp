@@ -449,7 +449,7 @@ namespace RKPP.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "News");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

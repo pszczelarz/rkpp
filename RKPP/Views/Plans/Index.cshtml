@@ -1,33 +1,56 @@
 ﻿@model IEnumerable<RKPP.Models.Plan>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Plan spotkań";
 }
 
-<h2>Index</h2>
+<h2>Plan spotkań pszczelarzy Rejonowego Koła Pszczelarzy w Pabianicach</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <p style="font-size:large;">
+                    @Html.DisplayWithBreaksAndSpacesFor(modelItem => item.Content)
+                </p>
+                <p>
+                    @Html.ActionLink("Edytuj plan", "Edit", new { id = item.Id }) |
+                </p>
+            </td>
+        </tr>
+    }
 </table>
+<table align="center">
+    <tr>
+        <td style="font-weight:bold;" id="rowPadding">
+            Spotkania mogą ulec zmianie z przyczyn nie zależnych od Zarządu.
+        </td>
+    </tr>
+    <tr>
+        <td id="rowPadding">
+            Zarząd Koła prosi koleżanki i kolegów o systematyczny udział w zebraniach. Imprezy i spotkania nie ujęte w harmonogramie omawiane będą na spotkaniu wcześniejszym.
+        </td>
+    </tr>
+    <tr>
+        <td id="rowPadding">
+            Działanie klubu dyskusyjnego zależy od zainteresowania pszczelarzy.
+        </td>
+    </tr>
+    <tr>
+        <td id="rowPadding">
+            Zarząd Koła zaprasza zainteresowanych pszczelarstwem.
+        </td>
+    </tr>
+</table>
+
+<style type="text/css">
+    #rowPadding {
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>

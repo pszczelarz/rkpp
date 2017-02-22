@@ -35,6 +35,7 @@ namespace RKPP.Controllers
         }
 
         // GET: News/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -45,6 +46,7 @@ namespace RKPP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Content,Date")] New @new)
         {
             if (ModelState.IsValid)
@@ -58,6 +60,7 @@ namespace RKPP.Controllers
         }
 
         // GET: News/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,6 +80,7 @@ namespace RKPP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Content,Date")] New @new)
         {
             if (ModelState.IsValid)
@@ -89,6 +93,7 @@ namespace RKPP.Controllers
         }
 
         // GET: News/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -106,6 +111,7 @@ namespace RKPP.Controllers
         // POST: News/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             New @new = db.News.Find(id);

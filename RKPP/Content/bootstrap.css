@@ -52,7 +52,7 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: SourceSansPro, 'SourceSansPro', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -311,7 +311,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: SourceSansPro, 'SourceSansPro', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -2399,6 +2399,11 @@ input[type="button"].btn-block {
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+
+@font-face {
+      font-family: 'SourceSansPro';
+      src: url('../Fonts/SourceSansPro-Regular.otf') format('opentype');
+    }
 
 .glyphicon {
   position: relative;

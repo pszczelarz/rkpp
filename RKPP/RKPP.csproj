@@ -212,6 +212,7 @@
     <Content Include="fonts\SIL Open Font License.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\pic03_2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\SourceSansPro-Black.otf" />

@@ -1,9 +1,11 @@
 ﻿@{
     ViewBag.Title = "Kontakt";
 }
-<h2>@ViewBag.Title.</h2>
+<h2 style="font-weight:bold;">@ViewBag.Title</h2>
 
-<br/>
+<div>
+    <a href="#" class="image featured"><img src=@Url.Content("~/images/pic03_2.jpg") alt="" /></a>
+</div>
 
 <address>
     <p>Rejonowe Koło Pszczelarzy nr 8 w Pabianicach</p>
@@ -11,3 +13,11 @@
 </address>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2474.542344409495!2d19.350188515990034!3d51.668215106752804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a363f5529710b%3A0x3b50f6fcf0846d45!2sTraugutta+2%2C+Pabianice!5e0!3m2!1spl!2spl!4v1458242455063" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<style type="text/css">
+    .image.featured {
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0;
+    }
+</style>

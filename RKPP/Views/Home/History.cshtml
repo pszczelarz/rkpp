@@ -1,9 +1,12 @@
 ﻿@{
     ViewBag.Title = "Historia";
 }
-<h2>@ViewBag.Title.</h2>
+<h2 style="font-weight:bold;">@ViewBag.Title</h2>
 <h3>Historia Koła Pszczelarzy w Pabianicach w skrócie</h3>
-<br/>
+
+<div>
+    <a href="#" class="image featured"><img src=@Url.Content("~/images/pic03_2.jpg") alt="" /></a>
+</div>
 <p>
     <strong>Koło w Pabianicach</strong> zostało wydzielone z <strong>koła nr. 1 w Łodzi</strong> na posiedzeniu zarządu w dniu <strong>
         18 lutego 1981
@@ -84,3 +87,10 @@
     </strong>.
 </p>
 
+<style type="text/css">
+    .image.featured {
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0;
+    }
+</style>

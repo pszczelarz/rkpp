@@ -4,7 +4,11 @@
     ViewBag.Title = "Plan spotkań";
 }
 
-<h2>Plan spotkań pszczelarzy Rejonowego Koła Pszczelarzy w Pabianicach</h2>
+<h2 style="font-weight:bold;">Plan spotkań pszczelarzy Rejonowego Koła Pszczelarzy w Pabianicach</h2>
+
+<div>
+    <a href="#" class="image featured"><img src=@Url.Content("~/images/pic03_2.jpg") alt="" /></a>
+</div>
 
 @*<p>
         @Html.ActionLink("Create New", "Create")
@@ -56,5 +60,11 @@
     #rowPadding {
         padding-top: 10px;
         text-align: center;
+    }
+
+    .image.featured {
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0;
     }
 </style>

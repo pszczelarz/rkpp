@@ -4,8 +4,11 @@
     ViewBag.Title = "Aktualności";
 }
 
-<h2>Aktualności</h2>
+<h2 style="font-weight:bold;">Aktualności</h2>
 
+<div>
+    <a href="#" class="image featured"><img src=@Url.Content("~/images/pic03_2.jpg") alt="" /></a>
+</div>
 <p>
 @if (User.Identity.IsAuthenticated)
 {
@@ -38,3 +41,11 @@
                     }
 
 </table>
+
+<style type="text/css">
+    .image.featured {
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0;
+    }
+</style>

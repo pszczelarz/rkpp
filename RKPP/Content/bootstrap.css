@@ -59,6 +59,8 @@ html {
 
 body {
   margin: 0;
+  background-color: #e8e8e8;
+  background-image: url("images/bg02.png");
 }
 
 a:focus {
@@ -315,7 +317,6 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
 }
 
 input,
